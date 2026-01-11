@@ -14,6 +14,16 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "ASU CS Wiki",
+      pagefind: true,
+      head: [
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'cloudflare-rocket-loader',
+            content: 'manual',
+          },
+        },
+      ],
       customCss: [
         "@fontsource-variable/space-grotesk",
         "./src/styles/custom.css",
