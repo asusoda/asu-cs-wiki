@@ -1,0 +1,118 @@
+---
+title: Hackathons
+description: Practical hackathon advice from SoDA and InnovationHacks workshops.
+---
+
+Hackathons are short, intense project-building events. They are useful for learning new tools, meeting teammates, creating resume projects, and practicing how to explain technical work.
+
+## what to expect
+
+InnovationHacks was described as a two-day rapid software prototyping event with teams of two to four people and problem statements revealed at the event. Other hackathons vary, but the core pattern is similar: form a team, understand the prompt, build a prototype, and present it clearly.
+
+## team composition
+
+Choosing the right teammates matters. A strong team is not just "four coders."
+
+Look for complementary strengths:
+
+- Backend or infrastructure
+- Frontend or mobile
+- Product design
+- User experience
+- Data, AI, or domain knowledge
+- Project management
+- Pitching and storytelling
+
+Agree early on communication norms, roles, and how you will make decisions when time is short.
+
+## understand the problem first
+
+Do not jump straight into code. Use the 5Ws:
+
+- Who has the problem?
+- What job do they need done?
+- When does the problem happen?
+- Where does the solution need to work?
+- Why does this matter?
+
+Then turn needs into requirements:
+
+- What must the solution do?
+- What constraints exist?
+- What would count as success?
+- What can be safely skipped for a demo?
+- What is novel, useful, or impressive about the approach?
+
+## design for feasibility
+
+A hackathon project should be scoped to finish. Define components and responsibilities before implementation.
+
+Good design choices:
+
+- Use a stack your team can move quickly in.
+- Prefer simple architecture over clever architecture.
+- Use abstraction only where it reduces confusion.
+- Keep communication tight.
+- Pick a deployment plan early.
+- Decide what the demo path will be before building too much.
+
+Vercel plus Supabase is a common quick stack for web apps, but use whatever your team knows well enough to ship.
+
+## implementation habits
+
+- Use version control from the start.
+- Prefer a monorepo unless there is a strong reason not to.
+- Document early so teammates and judges can understand the project.
+- Work in parallel, but integrate often.
+- Reserve time for the presentation.
+- Avoid scope creep.
+- Treat prototypes like experiments.
+
+The presentation is part of the product. A polished pitch can beat a slightly more complete project that judges cannot understand.
+
+## what to skip
+
+For a demo, no one is usually going to use your product at production scale. Skip low-value complexity unless it is central to the prompt.
+
+Usually skip:
+
+- Full authentication
+- Complex onboarding
+- Perfect settings pages
+- Overbuilt admin tools
+- Edge cases that will not appear in the demo
+- Infrastructure that does not support the story
+
+## using AI tools
+
+AI tools can help with debugging, scaffolding, design ideas, and unfamiliar APIs. Treat them like fast but imperfect assistants.
+
+Good AI use:
+
+- Ask for options, then choose intentionally.
+- Use AI to explain errors or unfamiliar libraries.
+- Generate boilerplate, then review it.
+- Use it to brainstorm edge cases.
+- Keep ownership of product direction and final code.
+
+Risky AI use:
+
+- Letting generated code define the whole product.
+- Accepting code you cannot explain.
+- Spending more time prompting than building.
+- Shipping insecure or broken code because it looked plausible.
+
+## judging and presentation
+
+A good final presentation answers:
+
+- What problem did you choose?
+- Who is the user?
+- What did you build?
+- Why is it useful or interesting?
+- What is technically impressive?
+- What did you learn or validate?
+- What would you do next?
+
+Show the happy path. If something is fragile, demo the part that works and explain the future plan honestly.
+

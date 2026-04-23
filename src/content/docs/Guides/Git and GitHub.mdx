@@ -1,0 +1,151 @@
+---
+title: Git and GitHub
+description: A beginner-friendly guide distilled from SoDA Git workshops.
+---
+
+Git is one of the most important tools to learn outside class. It lets you track changes, collaborate safely, recover from mistakes, and show employers that you can work like a software engineer.
+
+## git vs github
+
+Git is the version control system. It runs locally and tracks changes in a project.
+
+GitHub is a hosting service for Git repositories. It stores repositories in the cloud and adds collaboration features like issues, pull requests, code review, and project visibility.
+
+## why git matters
+
+Git helps you:
+
+- See what changed
+- See who changed it
+- See when it changed
+- Understand why it changed
+- Restore older versions
+- Work with teammates without overwriting each other
+- Review code before merging it
+
+Think of it like Google Docs version history, but designed for software projects.
+
+## core workflow
+
+```bash
+git init
+git status
+git add .
+git commit -m "Describe the change"
+git push
+git pull
+```
+
+What each command does:
+
+- `git init` creates a Git repository in a folder.
+- `git status` shows changed, staged, and untracked files.
+- `git add` stages files for the next commit.
+- `git commit` creates a snapshot of staged files.
+- `git push` sends local commits to a remote repository.
+- `git pull` brings remote changes down to your machine.
+
+Pull before pushing when collaborating so you start from the latest shared work.
+
+## commits
+
+A commit should represent a meaningful milestone. Do not wait until the entire project is perfect, but avoid committing unrelated changes together.
+
+Good commit habits:
+
+- Use short, descriptive messages.
+- Commit working checkpoints.
+- Keep unrelated changes separate.
+- Explain why a change exists when the reason is not obvious.
+- Push your branch so teammates and CI can see it.
+
+## staging
+
+Staging lets you choose what goes into a commit. This matters when you changed multiple things but only one is ready.
+
+Examples:
+
+```bash
+git add src/app.js
+git add src/app.js src/utils.js
+git add .
+```
+
+## gitignore
+
+A `.gitignore` file prevents accidental commits of files that should stay local.
+
+Common things to ignore:
+
+- `.env`
+- API keys and secrets
+- Local databases
+- Dependency folders like `node_modules`
+- Build output
+- Virtual environment folders
+
+Never commit secrets. If you do, rotate the secret instead of only deleting the file later.
+
+## branches
+
+Branches let you work on a unique set of changes without disrupting the main codebase.
+
+```bash
+git checkout -b my-feature
+git checkout main
+```
+
+Branch early and often. Branches are cheap, and they make it easier to experiment, ask for feedback, and keep work organized.
+
+## pull requests and code review
+
+A pull request asks to merge one branch into another. It gives teammates a place to review, discuss, test, and improve the change before it becomes part of the main codebase.
+
+Good pull requests:
+
+- Explain what changed
+- Explain why it changed
+- Include screenshots or test notes when relevant
+- Stay small enough to review
+- Link issues or tasks when possible
+
+## merge conflicts
+
+Merge conflicts happen when Git cannot automatically combine changes. They are normal, especially when multiple people edit the same lines.
+
+When resolving conflicts:
+
+- Pull the latest changes.
+- Read both versions carefully.
+- Keep the intended behavior from each side.
+- Run tests or manually verify after resolving.
+- Ask the teammate who wrote the other side if the conflict is unclear.
+
+## undoing changes
+
+There are multiple ways to undo changes, but shared history deserves care.
+
+`git revert` is usually safer for commits that other people may already have pulled. It creates a new commit that reverses an older one.
+
+`git reset` can rewrite history and should be used carefully, especially on shared branches.
+
+## continuous integration
+
+Continuous integration means code is built and tested frequently after commits are pushed. It helps teams catch errors earlier, reduce debugging cost, and avoid large painful merges.
+
+Common CI checks include:
+
+- Build succeeds
+- Tests pass
+- Formatting and linting pass
+- Type checks pass
+
+## github profile advice
+
+- Use the GitHub Student Developer Pack.
+- Keep class projects private if academic integrity rules require it.
+- Add READMEs to projects.
+- Pin projects that show your best work.
+- Use a profile picture and short bio.
+- Contribute consistently instead of only before recruiting season.
+
