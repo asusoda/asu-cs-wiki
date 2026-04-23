@@ -1,0 +1,145 @@
+---
+title: AI and LLM Projects
+description: Notes from SoDA LLM API and AI-in-coding workshops.
+---
+
+AI tools are useful, but they do not remove the need to understand software engineering. The strongest students use AI as a force multiplier: faster exploration, faster boilerplate, faster debugging, but still human-owned architecture, validation, and judgment.
+
+## example project: multimodal note summarizer
+
+One SoDA LLM API workshop used a note summarizer as the example project.
+
+Inputs:
+
+- Plain text notes
+- DOCX files
+- PDF files
+
+Process:
+
+- Extract text from the uploaded file.
+- Send the content to an LLM API.
+- Ask for clear bullet-point summaries or study-guide output.
+
+Output:
+
+- A concise summary displayed in a web app.
+- Optional variants like different voices, study guides, or image support.
+
+## quick stack
+
+The workshop used:
+
+- Python for application logic
+- Streamlit for the web UI
+- Google Gemini API for generation
+- `python-docx` for DOCX parsing
+- `PyPDF2` or similar tools for PDF parsing
+- `python-dotenv` for local secrets
+
+The basic setup:
+
+```bash
+pip install streamlit python-docx PyPDF2 google-generativeai python-dotenv
+```
+
+Store API keys in `.env`, then add `.env` to `.gitignore`.
+
+## streamlit basics
+
+Streamlit lets you build simple web apps without creating a separate frontend.
+
+Common UI calls:
+
+```python
+st.title("Title")
+st.header("Header")
+st.subheader("Subheader")
+st.write("Text or data")
+st.text_input("Enter your name")
+st.text_area("Paste notes")
+st.file_uploader("Upload a file", type=["txt", "docx", "pdf"])
+```
+
+Run a Streamlit app with:
+
+```bash
+streamlit run app.py
+```
+
+## file handling
+
+Uploaded files include a MIME type that helps determine how to parse them.
+
+Examples:
+
+- DOCX: `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
+- PDF: `application/pdf`
+- PNG: `image/png`
+
+Use the MIME type to route the file to the right extraction function.
+
+## prompt design
+
+For a summarizer, be specific about output shape:
+
+```text
+Summarize these notes for a college student.
+Return:
+1. Five key ideas
+2. Important definitions
+3. Likely exam questions
+4. A short study plan
+```
+
+Good prompts define:
+
+- Audience
+- Task
+- Format
+- Constraints
+- Tone
+- What to do when the input is missing or unclear
+
+## AI-assisted coding reality check
+
+An industry talk in the workshop set emphasized that AI coding tools can accelerate development, reduce boilerplate, catch some bugs, and help migrate or explain legacy code. They still need skilled supervision.
+
+AI is good at:
+
+- Pattern recognition
+- Boilerplate generation
+- Explaining unfamiliar APIs
+- Drafting tests
+- Suggesting refactors
+- Speeding up repetitive tasks
+
+AI is weak at:
+
+- Understanding business intent
+- Owning architecture
+- Handling large cross-file context perfectly
+- Guaranteeing secure or scalable code
+- Knowing team-specific conventions
+- Replacing human judgment
+
+## risks to watch
+
+- Generated code may be inefficient, outdated, insecure, or subtly wrong.
+- Models inherit both good and bad habits from public training data.
+- AI can create a false sense of correctness when outputs look polished.
+- Productivity gains often raise expectations rather than reduce workload.
+- More time may shift into reviewing, debugging, prompting, and validating generated code.
+
+## skills that stay valuable
+
+- CS fundamentals and data structures
+- Architecture and system design
+- Debugging and testing
+- Security awareness
+- Code review
+- Communication and leadership
+- Domain knowledge in real industries
+
+The future is not "AI replaces engineers." It is more likely that engineers who can use AI well, validate it carefully, and connect it to real problems will have an advantage.
+

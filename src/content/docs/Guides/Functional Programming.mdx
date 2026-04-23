@@ -1,0 +1,105 @@
+---
+title: Functional Programming
+description: A practical introduction to functional programming ideas from a SoDA technical talk.
+---
+
+Functional programming is useful even if you do not write Haskell, Rust, Scala, or another language associated with FP. The core ideas help you write code that is easier to test, read, parallelize, and reuse.
+
+## the mindset
+
+Functional programming emphasizes:
+
+- Functions and types over classes and class methods
+- Pure functions
+- Immutability where practical
+- Data transformations
+- Small composable pieces
+- Clear inputs and outputs
+
+You do not need to rewrite everything in a purely functional style. Even using these ideas selectively can improve everyday Java, Python, JavaScript, TypeScript, C++, or C#.
+
+## pure functions
+
+A pure function is fully described by its inputs and return value. If you call it with the same arguments, it returns the same result and does not change anything outside itself.
+
+Examples:
+
+```text
+add(1, 2) -> 3
+add(0, 140) -> 140
+add(100, -20) -> 80
+```
+
+Pure operations include arithmetic, comparisons, string length, and reading an array value.
+
+Impure operations include printing, writing files, mutating a list, reading random numbers, calling a database, or changing global state.
+
+## side effects
+
+Side effects are not always bad. Real programs need input, output, files, databases, logs, APIs, and randomness.
+
+The functional programming lesson is to quarantine side effects:
+
+- Keep business logic pure when possible.
+- Put file, network, database, and UI effects near the edges.
+- Pass data into pure functions.
+- Return new data instead of mutating hidden state.
+- Test pure functions directly.
+
+This makes the hard parts of a program easier to reason about.
+
+## functions as values
+
+Many languages let you pass functions around like values. That makes it easier to reuse behavior.
+
+```js
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map((n) => n * 2);
+```
+
+The function `(n) => n * 2` is passed into `map`.
+
+## map, filter, reduce
+
+These are common array programming tools.
+
+`map` transforms every item:
+
+```js
+const names = users.map((user) => user.name);
+```
+
+`filter` keeps only matching items:
+
+```js
+const activeUsers = users.filter((user) => user.active);
+```
+
+`reduce` combines many items into one result:
+
+```js
+const total = cart.reduce((sum, item) => sum + item.price, 0);
+```
+
+These tools are useful because they describe what transformation you want without manually managing loop state.
+
+## types matter
+
+Types help document what a function expects and returns. They catch mistakes earlier and make code easier to change.
+
+Optional types are especially useful because they force you to handle missing values explicitly instead of hoping `null` never appears.
+
+The talk referenced null as the "billion dollar mistake" because null-related errors have caused enormous real-world cost. Modern languages and type systems try to reduce those mistakes through `Optional`, `Maybe`, nullable annotations, or strict null checks.
+
+## when to use FP ideas
+
+Use functional programming ideas when:
+
+- A function is hard to test because it touches too much state.
+- Bugs come from unexpected mutation.
+- You need to transform collections of data.
+- You want logic that can run in parallel more safely.
+- You need code that is easier to review.
+
+Avoid forcing FP style when it makes simple code harder to understand. The goal is clarity, not showing off.
+
