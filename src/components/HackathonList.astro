@@ -1,0 +1,108 @@
+---
+import AnchorHeading from '@astrojs/starlight/components/AnchorHeading.astro';
+import hackathonsData from '../data/hackathons.json';
+
+/**
+ * Renders the hackathon tables on /guides/hackathons.
+ *
+ * All content lives in src/data/hackathons.json -- to add, remove, or re-date an
+ * event, edit that file only. Nothing here needs to change.
+ */
+
+interface Hackathon {
+  name: string;
+  host: string;
+  url?: string;
+  dates: string;
+  sort: string;
+  local?: boolean;
+}
+
+interface HackathonGroup {
+  id: string;
+  label: string;
+  blurb?: string;
+  events: Hackathon[];
+}
+
+const { lastVerified, groups } = hackathonsData as {
+  lastVerified: string;
+  groups: HackathonGroup[];
+};
+
+// Sort by date here rather than asking editors to keep the JSON ordered by hand.
+const sortedGroups = groups.map((group) => ({
+  ...group,
+  events: [...group.events].sort((a, b) => a.sort.localeCompare(b.sort)),
+}));
+
+const verifiedOn = new Date(`${lastVerified}T00:00:00Z`).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<p class="hackathon-verified">
+  Dates last verified <strong>{verifiedOn}</strong>. Hackathon dates move every year, so treat
+  anything here as a starting point and confirm on the event's own site.
+</p>
+
+{
+  sortedGroups.map((group) => (
+    <div>
+      <AnchorHeading level="3" id={group.id}>
+        {group.label}
+      </AnchorHeading>
+      {group.blurb && <p>{group.blurb}</p>}
+      <table class="hackathon-table">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Host</th>
+            <th>Dates</th>
+          </tr>
+        </thead>
+        <tbody>
+          {group.events.map((event) => (
+            <tr>
+              <td>
+                {event.url ? <a href={event.url}>{event.name}</a> : event.name}
+                {event.local && <span class="hackathon-local">Arizona</span>}
+              </td>
+              <td>{event.host}</td>
+              <td>{event.dates}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ))
+}
+
+<style>
+  .hackathon-verified {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+
+  .hackathon-table {
+    width: 100%;
+  }
+
+  .hackathon-table td:first-child {
+    min-width: 12rem;
+  }
+
+  .hackathon-local {
+    display: inline-block;
+    margin-inline-start: 0.5rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 0.25rem;
+    background: var(--sl-color-accent-low);
+    color: var(--sl-color-white);
+    font-size: var(--sl-text-xs);
+    vertical-align: middle;
+  }
+</style>
