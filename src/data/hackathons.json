@@ -1,0 +1,330 @@
+{
+  "$comment": "Edit this file to update the hackathon list. Rendered by src/components/HackathonList.astro, used in src/content/docs/Guides/Hackathons.mdx. To add an event, drop a new object into the right group's `events` array -- order within a group does not matter, the component sorts by `sort`. Fields: name (required), host (required), url (optional, omit to render unlinked), dates (required, free text -- write \"TBA\" forms like \"February 2027, TBA\" when unconfirmed), sort (required, YYYY-MM-DD used only for ordering; use the 1st of the month for TBA events), local (optional, true highlights Arizona events).",
+  "lastVerified": "2026-09-03",
+  "groups": [
+    {
+      "id": "fall-2026",
+      "label": "Fall 2026",
+      "blurb": "Applications for most of these are open or opening now.",
+      "events": [
+        {
+          "name": "HackRice",
+          "host": "Rice",
+          "url": "https://hackrice.com/",
+          "dates": "Sep 11-13, 2026",
+          "sort": "2026-09-11"
+        },
+        {
+          "name": "Hack the North",
+          "host": "Waterloo",
+          "url": "https://hackthenorth.com/",
+          "dates": "Sep 18-20, 2026",
+          "sort": "2026-09-18"
+        },
+        {
+          "name": "HopHacks",
+          "host": "Johns Hopkins",
+          "url": "https://hophacks.com/",
+          "dates": "Sep 18-20, 2026",
+          "sort": "2026-09-18"
+        },
+        {
+          "name": "VTHacks 14",
+          "host": "Virginia Tech",
+          "url": "https://vthacks.com/",
+          "dates": "Sep 18-20, 2026",
+          "sort": "2026-09-18"
+        },
+        {
+          "name": "HackMIT",
+          "host": "MIT",
+          "url": "https://hackmit.org/",
+          "dates": "Sep 19-20, 2026",
+          "sort": "2026-09-19"
+        },
+        {
+          "name": "HackGT 13",
+          "host": "Georgia Tech",
+          "url": "https://hack.gt/",
+          "dates": "Sep 25-27, 2026",
+          "sort": "2026-09-25"
+        },
+        {
+          "name": "ShellHacks",
+          "host": "FIU",
+          "url": "https://shellhacks.net/",
+          "dates": "Sep 25-27, 2026",
+          "sort": "2026-09-25"
+        },
+        {
+          "name": "BigRed//Hacks",
+          "host": "Cornell",
+          "url": "https://bigredhacks.com/",
+          "dates": "Oct 2-4, 2026",
+          "sort": "2026-10-02"
+        },
+        {
+          "name": "MHacks",
+          "host": "Michigan",
+          "url": "https://mhacks.org/",
+          "dates": "Oct 3-4, 2026",
+          "sort": "2026-10-03"
+        },
+        {
+          "name": "HackNC",
+          "host": "UNC Chapel Hill",
+          "url": "https://hacknc.com/",
+          "dates": "Oct 9-11, 2026",
+          "sort": "2026-10-09"
+        },
+        {
+          "name": "Knight Hacks IX",
+          "host": "UCF",
+          "url": "https://knighthacks.org/",
+          "dates": "Oct 9-11, 2026",
+          "sort": "2026-10-09"
+        },
+        {
+          "name": "HackHarvard",
+          "host": "Harvard",
+          "url": "https://hackharvard.io/",
+          "dates": "Oct 16-18, 2026",
+          "sort": "2026-10-16"
+        },
+        {
+          "name": "SwampHacks XII",
+          "host": "Florida",
+          "url": "https://swamphacks.com/",
+          "dates": "Oct 16-18, 2026",
+          "sort": "2026-10-16"
+        },
+        {
+          "name": "Hack the Valley",
+          "host": "Toronto Scarborough",
+          "url": "https://hackthevalley.io/",
+          "dates": "Oct 16-18, 2026",
+          "sort": "2026-10-16"
+        },
+        {
+          "name": "DubHacks",
+          "host": "Washington",
+          "url": "https://dubhacks.co/",
+          "dates": "Oct 17-18, 2026",
+          "sort": "2026-10-17"
+        },
+        {
+          "name": "LA Hacks AI Hackathon",
+          "host": "UCLA",
+          "url": "https://lahacks.com/",
+          "dates": "Oct 17-18, 2026",
+          "sort": "2026-10-17"
+        },
+        {
+          "name": "Cal Hacks 13.0",
+          "host": "UC Berkeley",
+          "url": "https://calhacks.io/",
+          "dates": "Oct 23-25, 2026",
+          "sort": "2026-10-23"
+        },
+        {
+          "name": "HackTX 26",
+          "host": "UT Austin",
+          "url": "https://hacktx.com/",
+          "dates": "Oct 24-25, 2026",
+          "sort": "2026-10-24"
+        },
+        {
+          "name": "HackPSU Fall",
+          "host": "Penn State",
+          "url": "https://hackpsu.org/",
+          "dates": "Oct 24-25, 2026",
+          "sort": "2026-10-24"
+        },
+        {
+          "name": "HackUTD",
+          "host": "UT Dallas",
+          "url": "https://hackutd.co/",
+          "dates": "Nov 7-8, 2026",
+          "sort": "2026-11-07"
+        },
+        {
+          "name": "HackRPI",
+          "host": "RPI",
+          "url": "https://hackrpi.com/",
+          "dates": "Nov 7-8, 2026",
+          "sort": "2026-11-07"
+        },
+        {
+          "name": "HackPrinceton Fall",
+          "host": "Princeton",
+          "url": "https://hackprinceton.com/",
+          "dates": "Nov 13-15, 2026",
+          "sort": "2026-11-13"
+        },
+        {
+          "name": "HackUMass",
+          "host": "UMass Amherst",
+          "url": "https://hackumass.com/",
+          "dates": "Nov 13-15, 2026",
+          "sort": "2026-11-13"
+        },
+        {
+          "name": "Opportunity Hack",
+          "host": "ASU Tempe",
+          "url": "https://ohack.dev/hack/fall-2026",
+          "dates": "Nov 14-15, 2026",
+          "sort": "2026-11-14",
+          "local": true
+        },
+        {
+          "name": "SunHacks",
+          "host": "ASU",
+          "url": "https://sunhacks.io/",
+          "dates": "November 2026, TBA",
+          "sort": "2026-11-01",
+          "local": true
+        },
+        {
+          "name": "Hack Western 13",
+          "host": "Western University",
+          "url": "https://hackwestern.com/",
+          "dates": "Nov 20-22, 2026",
+          "sort": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "id": "winter-spring-2027",
+      "label": "Winter and Spring 2027",
+      "blurb": "Applications generally open between November and February.",
+      "events": [
+        {
+          "name": "DeltaHacks",
+          "host": "McMaster",
+          "url": "https://deltahacks.com/",
+          "dates": "Jan 9-10, 2027",
+          "sort": "2027-01-09"
+        },
+        {
+          "name": "UofTHacks",
+          "host": "Toronto",
+          "url": "https://uofthacks.com/",
+          "dates": "Jan 15-17, 2027",
+          "sort": "2027-01-15"
+        },
+        {
+          "name": "uOttaHack 9",
+          "host": "Ottawa",
+          "url": "https://uottahack.ca/",
+          "dates": "Jan 15-17, 2027",
+          "sort": "2027-01-15"
+        },
+        {
+          "name": "nwHacks",
+          "host": "UBC",
+          "url": "https://nwhacks.io/",
+          "dates": "Jan 16-17, 2027",
+          "sort": "2027-01-16"
+        },
+        {
+          "name": "Hack@Brown",
+          "host": "Brown",
+          "url": "https://hackatbrown.org/",
+          "dates": "Feb 5-7, 2027",
+          "sort": "2027-02-05"
+        },
+        {
+          "name": "SpartaHack",
+          "host": "Michigan State",
+          "url": "https://spartahack.com/",
+          "dates": "Feb 6-7, 2027",
+          "sort": "2027-02-06"
+        },
+        {
+          "name": "TreeHacks",
+          "host": "Stanford",
+          "url": "https://treehacks.com/",
+          "dates": "mid-February 2027, TBA",
+          "sort": "2027-02-13"
+        },
+        {
+          "name": "HackNYU",
+          "host": "NYU",
+          "url": "https://hacknyu.org/",
+          "dates": "February 2027, TBA",
+          "sort": "2027-02-15"
+        },
+        {
+          "name": "SF Hacks",
+          "host": "SF State",
+          "url": "https://sfhacks.io/",
+          "dates": "Feb 19-21, 2027",
+          "sort": "2027-02-19"
+        },
+        {
+          "name": "HackIllinois",
+          "host": "UIUC",
+          "url": "https://hackillinois.org/",
+          "dates": "Feb 26-28, 2027",
+          "sort": "2027-02-26"
+        },
+        {
+          "name": "Hacklytics",
+          "host": "Georgia Tech",
+          "url": "https://hacklytics.io/",
+          "dates": "Feb 26-28, 2027",
+          "sort": "2027-02-26"
+        },
+        {
+          "name": "Diamondhacks",
+          "host": "UC San Diego",
+          "url": "https://diamondhacks.com/",
+          "dates": "Apr 4-5, 2027",
+          "sort": "2027-04-04"
+        },
+        {
+          "name": "HackKU27",
+          "host": "Kansas",
+          "url": "https://hackku.org/",
+          "dates": "Apr 9-11, 2027",
+          "sort": "2027-04-09"
+        },
+        {
+          "name": "LA Hacks 27",
+          "host": "UCLA",
+          "url": "https://lahacks.com/",
+          "dates": "Apr 16-18, 2027",
+          "sort": "2027-04-16"
+        },
+        {
+          "name": "PennApps XXVII",
+          "host": "Penn",
+          "url": "https://pennapps.com/",
+          "dates": "spring 2027, TBA",
+          "sort": "2027-04-01"
+        },
+        {
+          "name": "WildHacks",
+          "host": "Northwestern",
+          "url": "https://wildhacks.net/",
+          "dates": "April 2027, TBA",
+          "sort": "2027-04-11"
+        },
+        {
+          "name": "Bitcamp",
+          "host": "Maryland",
+          "url": "https://bit.camp/",
+          "dates": "April 2027, TBA",
+          "sort": "2027-04-10"
+        },
+        {
+          "name": "HackDavis",
+          "host": "UC Davis",
+          "url": "https://hackdavis.io/",
+          "dates": "spring 2027, TBA",
+          "sort": "2027-05-01"
+        }
+      ]
+    }
+  ]
+}
