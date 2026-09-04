@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "dev:search": "astro build && astro preview",
     "astro": "astro"
   },
   "dependencies": {
