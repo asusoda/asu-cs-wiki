@@ -3,6 +3,7 @@ import { defineConfig, passthroughImageService } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import mermaid from "astro-mermaid";
+import disableRocketLoader from "./src/integrations/disable-rocket-loader.mjs";
 
 
 // https://astro.build/config
@@ -139,6 +140,7 @@ export default defineConfig({
         theme: "forest"
       }
     ),
+    disableRocketLoader(),
   ],
 
   vite: {
