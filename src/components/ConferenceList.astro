@@ -10,6 +10,8 @@ import conferencesData from '../data/conferences.json';
  * Unlike HackathonList, this component renders a single group and no heading of
  * its own. The headings live in the MDX so Starlight picks them up for the page
  * table of contents, which it cannot do for headings emitted from a component.
+ *
+ * The page is intentionally tables only -- no blurbs, no surrounding prose.
  */
 
 interface Conference {
@@ -25,21 +27,17 @@ interface Conference {
 interface ConferenceGroup {
   id: string;
   label: string;
-  blurb?: string;
   events: Conference[];
 }
 
 interface Props {
   /** `id` of the group in conferences.json to render. */
   group: string;
-  /** Render the shared freshness caveat above the table. Use once per page. */
-  note?: boolean;
 }
 
-const { group: groupId, note = false } = Astro.props;
+const { group: groupId } = Astro.props;
 
-const { note: freshnessNote, groups } = conferencesData as {
-  note: string;
+const { groups } = conferencesData as {
   groups: ConferenceGroup[];
 };
 
@@ -60,10 +58,6 @@ const events = [...group.events].sort(
   (a, b) => academicOrder(a.sort) - academicOrder(b.sort)
 );
 ---
-
-{note && <p class="conference-note">{freshnessNote}</p>}
-
-{group.blurb && <p>{group.blurb}</p>}
 
 <table class="conference-table">
   <thead>
@@ -88,11 +82,6 @@ const events = [...group.events].sort(
 </table>
 
 <style>
-  .conference-note {
-    font-size: var(--sl-text-sm);
-    color: var(--sl-color-gray-3);
-  }
-
   .conference-table {
     width: 100%;
   }
