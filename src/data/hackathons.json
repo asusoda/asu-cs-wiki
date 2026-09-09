@@ -1,5 +1,5 @@
 {
-  "$comment": "Edit this file to update the hackathon list. Rendered by src/components/HackathonList.astro, used in src/content/docs/Guides/Hackathons.mdx. To add an event, drop a new object into the right group's `events` array -- order within a group does not matter, the component sorts by `sort`. Fields: name (required), host (required), url (optional, omit to render unlinked), dates (required, free text -- write \"TBA\" forms like \"February 2027, TBA\" when unconfirmed), sort (required, YYYY-MM-DD used only for ordering; use the 1st of the month for TBA events), local (optional, true highlights Arizona events).",
+  "$comment": "Edit this file to update the hackathon list. Rendered by src/components/HackathonList.astro, used in src/content/docs/Guides/Hackathons.mdx. To add an event, drop a new object into the right group's `events` array -- order within a group does not matter, the component sorts by `sort`. Fields: name (required), host (required), url (optional, omit to render unlinked), dates (required, free text -- write \"TBA\" forms like \"February 2027, TBA\" when unconfirmed), sort (required, YYYY-MM-DD used only for ordering; use the 1st of the month for TBA events), local (optional, true highlights Arizona events). Note: UCLA runs two separate events off lahacks.com -- a fall AI hackathon and the main spring LA Hacks -- so both rows are intentional, not a duplicate.",
   "lastVerified": "2026-09-03",
   "groups": [
     {
@@ -170,8 +170,8 @@
         },
         {
           "name": "Opportunity Hack",
-          "host": "ASU Tempe",
-          "url": "https://ohack.dev/hack/fall-2026",
+          "host": "ASU",
+          "url": "https://ohack.dev/",
           "dates": "Nov 14-15, 2026",
           "sort": "2026-11-14",
           "local": true

@@ -1,0 +1,114 @@
+---
+import conferencesData from '../data/conferences.json';
+
+/**
+ * Renders one group of the conference directory on /guides/conferences.
+ *
+ * All content lives in src/data/conferences.json -- to add, remove, or re-date
+ * an event, edit that file only. Nothing here needs to change.
+ *
+ * Unlike HackathonList, this component renders a single group and no heading of
+ * its own. The headings live in the MDX so Starlight picks them up for the page
+ * table of contents, which it cannot do for headings emitted from a component.
+ */
+
+interface Conference {
+  name: string;
+  url?: string;
+  where?: string;
+  when: string;
+  about: string;
+  sort: string;
+  local?: boolean;
+}
+
+interface ConferenceGroup {
+  id: string;
+  label: string;
+  blurb?: string;
+  events: Conference[];
+}
+
+interface Props {
+  /** `id` of the group in conferences.json to render. */
+  group: string;
+  /** Render the shared freshness caveat above the table. Use once per page. */
+  note?: boolean;
+}
+
+const { group: groupId, note = false } = Astro.props;
+
+const { note: freshnessNote, groups } = conferencesData as {
+  note: string;
+  groups: ConferenceGroup[];
+};
+
+const group = groups.find((candidate) => candidate.id === groupId);
+
+if (!group) {
+  throw new Error(
+    `ConferenceList: no group with id "${groupId}" in src/data/conferences.json. ` +
+      `Available groups: ${groups.map((candidate) => candidate.id).join(', ')}.`
+  );
+}
+
+// Order by academic year rather than calendar year, so a student reading this in
+// the fall sees the next events first. August sorts first, July last.
+const academicOrder = (month: string) => (Number(month) + 4) % 12;
+
+const events = [...group.events].sort(
+  (a, b) => academicOrder(a.sort) - academicOrder(b.sort)
+);
+---
+
+{note && <p class="conference-note">{freshnessNote}</p>}
+
+{group.blurb && <p>{group.blurb}</p>}
+
+<table class="conference-table">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Dates</th>
+      <th>About</th>
+    </tr>
+  </thead>
+  <tbody>
+    {events.map((event) => (
+      <tr>
+        <td>
+          {event.url ? <a href={event.url}>{event.name}</a> : event.name}
+          {event.local && <span class="conference-local">Arizona</span>}
+        </td>
+        <td>{event.where ? `${event.where}, ${event.when}` : event.when}</td>
+        <td>{event.about}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+<style>
+  .conference-note {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+
+  .conference-table {
+    width: 100%;
+  }
+
+  .conference-table td:first-child {
+    min-width: 12rem;
+  }
+
+  .conference-local {
+    display: inline-block;
+    margin-inline-start: 0.5rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 0.25rem;
+    background: var(--sl-color-accent-low);
+    color: var(--sl-color-white);
+    font-size: var(--sl-text-xs);
+    vertical-align: middle;
+  }
+</style>

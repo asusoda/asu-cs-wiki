@@ -93,6 +93,7 @@ export default defineConfig({
                 { label: "Student Organizations", link: "/guides/clubs/" },
                 { label: "What SoDA Is", link: "/guides/soda-guide/" },
                 { label: "Hackathons", link: "/guides/hackathons/" },
+                { label: "Conferences", link: "/guides/conferences/" },
                 { label: "Workshop Notes", link: "/guides/workshop-notes/" },
               ],
             },
