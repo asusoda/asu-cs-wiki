@@ -1,0 +1,149 @@
+{
+  "$comment": "Edit this file to update the conference list. Rendered by src/components/ConferenceList.astro, used in src/content/docs/Guides/Conferences.mdx. To add an event, drop a new object into the right group's `events` array -- order within a group does not matter, the component sorts by `sort`. Fields: name (required), url (optional, omit to render unlinked), where (optional, the city -- omit entirely for conferences whose location moves each year), when (required, free text month or month range), about (required, one or two plain sentences on what the event is for), sort (required, the two-digit month it usually falls in, e.g. \"03\" for March -- the component orders each group by academic year, so August sorts first and July last), local (optional, true highlights Arizona events). Unlike the hackathon list these are annual recurring events, so `when` is a month rather than a specific date.",
+  "note": "Timing shown is the usual annual pattern, not confirmed dates for this cycle. Conferences move cities and dates every year, so check the event's own site before planning around anything here.",
+  "groups": [
+    {
+      "id": "recruiting",
+      "label": "Recruiting and career fairs",
+      "blurb": "Start here. These are the conferences where an undergraduate with no publications can walk in and walk out with an interview. Most run student scholarship programs that close months before the event.",
+      "events": [
+        {
+          "name": "Grace Hopper Celebration",
+          "url": "https://ghc.anitab.org/",
+          "when": "September to October",
+          "sort": "09",
+          "about": "The largest career fair for women and nonbinary technologists, with on-site interviews and a heavy corporate presence."
+        },
+        {
+          "name": "ACM Richard Tapia Celebration of Diversity in Computing",
+          "url": "https://tapiaconference.cmd-it.org/",
+          "when": "September",
+          "sort": "09",
+          "about": "A diversity in computing conference that draws industry recruiters and graduate programs in roughly equal measure."
+        },
+        {
+          "name": "Out for Undergrad Tech",
+          "url": "https://outforundergrad.org/",
+          "when": "Fall",
+          "sort": "10",
+          "about": "An application-only career conference for LGBTQ+ undergraduates, run in partnership with large tech sponsors."
+        },
+        {
+          "name": "SHPE National Convention",
+          "url": "https://shpe.org/",
+          "when": "October to November",
+          "sort": "11",
+          "about": "One of the largest STEM career fairs in the country and a common destination for ASU engineering students."
+        },
+        {
+          "name": "NSBE Annual Convention",
+          "url": "https://convention.nsbe.org/",
+          "when": "March",
+          "sort": "03",
+          "about": "A large corporate career fair and convention for Black engineers."
+        }
+      ]
+    },
+    {
+      "id": "arizona-and-drivable",
+      "label": "Arizona and drivable",
+      "blurb": "No flight required. These are the easiest ones to try first if you have never been to a conference.",
+      "events": [
+        {
+          "name": "DEF CON",
+          "url": "https://defcon.org/",
+          "where": "Las Vegas",
+          "when": "August",
+          "sort": "08",
+          "about": "The largest hacker convention in the world, covering hardware hacking, red teaming, and CTFs. Roughly a five hour drive from Phoenix."
+        },
+        {
+          "name": "Black Hat USA",
+          "url": "https://blackhat.com/",
+          "where": "Las Vegas",
+          "when": "August",
+          "sort": "08",
+          "about": "Enterprise security research briefings and a large vendor hall, held the same week as DEF CON."
+        },
+        {
+          "name": "CactusCon",
+          "url": "https://cactuscon.com/",
+          "where": "Phoenix area",
+          "when": "February",
+          "sort": "02",
+          "local": true,
+          "about": "The largest security conference in the Southwest, with cheap student tickets, hands-on villages, and a CTF."
+        }
+      ]
+    },
+    {
+      "id": "industry-and-developer",
+      "label": "Industry and developer conferences",
+      "blurb": "These are expensive to attend in person and rarely worth a student paying out of pocket. Almost all of them stream the keynote and most sessions for free, which is how to get the value as an undergraduate.",
+      "events": [
+        {
+          "name": "GitHub Universe",
+          "url": "https://githubuniverse.com/",
+          "where": "San Francisco",
+          "when": "October to November",
+          "sort": "10",
+          "about": "Developer tooling, open source, and Copilot. A free virtual pass is usually available."
+        },
+        {
+          "name": "KubeCon + CloudNativeCon North America",
+          "url": "https://cncf.io/kubecon-cloudnativecon-events/",
+          "when": "November",
+          "sort": "11",
+          "about": "Kubernetes, containers, and observability, run by the open source infrastructure community."
+        },
+        {
+          "name": "AWS re:Invent",
+          "url": "https://reinvent.awsevents.com/",
+          "where": "Las Vegas",
+          "when": "December",
+          "sort": "12",
+          "about": "Cloud infrastructure and distributed systems at very large scale."
+        },
+        {
+          "name": "NVIDIA GTC",
+          "url": "https://nvidia.com/gtc/",
+          "where": "San Jose",
+          "when": "March",
+          "sort": "03",
+          "about": "GPUs, CUDA, and generative AI infrastructure. Most sessions are free to watch online."
+        },
+        {
+          "name": "Microsoft Build",
+          "url": "https://build.microsoft.com/",
+          "where": "Seattle",
+          "when": "May",
+          "sort": "05",
+          "about": "Azure, GitHub Copilot, and Microsoft developer tooling. Free to watch online."
+        },
+        {
+          "name": "Google I/O",
+          "url": "https://io.google/",
+          "where": "Mountain View",
+          "when": "May",
+          "sort": "05",
+          "about": "Android, web, and Gemini developer tooling. The keynote and sessions stream free."
+        },
+        {
+          "name": "PyCon US",
+          "url": "https://us.pycon.org/",
+          "when": "May",
+          "sort": "05",
+          "about": "The Python language and community conference, with discounted student registration."
+        },
+        {
+          "name": "Apple WWDC",
+          "url": "https://developer.apple.com/wwdc/",
+          "where": "Cupertino",
+          "when": "June",
+          "sort": "06",
+          "about": "iOS, macOS, Swift, and on-device machine learning. Free to watch online."
+        }
+      ]
+    }
+  ]
+}
