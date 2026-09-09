@@ -1,11 +1,9 @@
 {
-  "$comment": "Edit this file to update the conference list. Rendered by src/components/ConferenceList.astro, used in src/content/docs/Guides/Conferences.mdx. To add an event, drop a new object into the right group's `events` array -- order within a group does not matter, the component sorts by `sort`. Fields: name (required), url (optional, omit to render unlinked), where (optional, the city -- omit entirely for conferences whose location moves each year), when (required, free text month or month range), about (required, one or two plain sentences on what the event is for), sort (required, the two-digit month it usually falls in, e.g. \"03\" for March -- the component orders each group by academic year, so August sorts first and July last), local (optional, true highlights Arizona events). Unlike the hackathon list these are annual recurring events, so `when` is a month rather than a specific date.",
-  "note": "Timing shown is the usual annual pattern, not confirmed dates for this cycle. Conferences move cities and dates every year, so check the event's own site before planning around anything here.",
+  "$comment": "Edit this file to update the conference list. Rendered by src/components/ConferenceList.astro, used in src/content/docs/Guides/Conferences.mdx. To add an event, drop a new object into the right group's `events` array -- order within a group does not matter, the component sorts by `sort`. Fields: name (required), url (optional, omit to render unlinked), where (optional, the city -- omit entirely for conferences whose location moves each year), when (required, free text month or month range), about (required, one or two plain sentences on what the event is for), sort (required, the two-digit month it usually falls in, e.g. \"03\" for March -- the component orders each group by academic year, so August sorts first and July last), local (optional, true highlights Arizona events). Unlike the hackathon list these are annual recurring events, so `when` is a month rather than a specific date. This page is intentionally tables only -- groups carry no blurb and the page carries no surrounding prose.",
   "groups": [
     {
       "id": "recruiting",
       "label": "Recruiting and career fairs",
-      "blurb": "Start here. These are the conferences where an undergraduate with no publications can walk in and walk out with an interview. Most run student scholarship programs that close months before the event.",
       "events": [
         {
           "name": "Grace Hopper Celebration",
@@ -47,7 +45,6 @@
     {
       "id": "arizona-and-drivable",
       "label": "Arizona and drivable",
-      "blurb": "No flight required. These are the easiest ones to try first if you have never been to a conference.",
       "events": [
         {
           "name": "DEF CON",
@@ -79,7 +76,6 @@
     {
       "id": "industry-and-developer",
       "label": "Industry and developer conferences",
-      "blurb": "These are expensive to attend in person and rarely worth a student paying out of pocket. Almost all of them stream the keynote and most sessions for free, which is how to get the value as an undergraduate.",
       "events": [
         {
           "name": "GitHub Universe",
