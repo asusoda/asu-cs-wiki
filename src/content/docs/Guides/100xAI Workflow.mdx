@@ -1,0 +1,320 @@
+---
+title: 100xAI Workflow
+description: AI agent tools for writing, reviewing, running, and planning to maximize productivity.
+---
+
+## writing good code
+
+### coding agents
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Claude Code](https://www.claude.com/product/claude-code) | Anthropic's coding agent for the terminal, IDE, and web | Paid (Claude plan or API) |
+| [Codex](https://openai.com/codex/) | OpenAI's coding agent for the terminal, IDE, and cloud | Paid (ChatGPT plan or API) |
+| [Cursor](https://cursor.com) | AI code editor with agent mode and cloud agents | Free tier |
+| [Google Antigravity](https://antigravity.google) | Google's agent-first IDE | Free tier |
+| [GitHub Copilot](https://github.com/features/copilot) | Completions, agent mode in VS Code, and a cloud coding agent | Free tier |
+| [Devin](https://devin.ai) | Cognition's cloud agent that works in its own sandbox and opens pull requests; Windsurf, its editor, is now Devin Desktop | Paid |
+| [Amp](https://ampcode.com) | Sourcegraph's coding agent for the terminal and editor | Paid |
+| [Factory](https://factory.ai) | Droids, coding agents for the terminal, IDE, CI, and cloud | Free tier |
+| [Kiro](https://kiro.dev) | AWS's spec-driven AI IDE and CLI | Free tier |
+| [Zed](https://zed.dev) | Fast editor with built-in agent support | Free tier |
+| [Warp](https://www.warp.dev) | Terminal with built-in coding agents and cloud agents | Free tier |
+| [Augment Code](https://www.augmentcode.com) | IDE and CLI agent that indexes large codebases for context | Paid |
+| [JetBrains Junie](https://www.jetbrains.com/junie) | Coding agent inside JetBrains IDEs | Paid |
+| [Tabnine](https://www.tabnine.com) | Completions and agents that can run on your own servers | Paid |
+| [Google Jules](https://jules.google) | Async agent that works on a GitHub repo in a VM and opens pull requests | Free tier |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Google's terminal agent for Gemini models | Open source |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) | Terminal agent built for Qwen coder models | Open source |
+| [Kimi Code CLI](https://github.com/MoonshotAI/kimi-code) | Moonshot AI's terminal agent for Kimi models | Open source |
+| [ZCode](https://github.com/zai-org/ZCode) | Z.ai's coding agent for GLM models | Open source |
+| [Deep Code](https://github.com/lessweb/deepcode-cli) | Community terminal agent tuned for DeepSeek models; DeepSeek's API docs cover setup | Open source |
+| [Pi](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) | Minimal, extensible terminal coding agent that works with many model providers | Open source |
+| [Mistral Vibe](https://github.com/mistralai/mistral-vibe) | Mistral's minimal CLI coding agent | Open source |
+| [OpenCode](https://opencode.ai) | Terminal coding agent, works with any model provider | Open source |
+| [Crush](https://github.com/charmbracelet/crush) | Charm's terminal coding agent, works with many model providers | Open source |
+| [Goose](https://github.com/block/goose) | Block's local agent, works with any model provider | Open source |
+| [Aider](https://aider.chat) | Terminal pair programmer that commits to git | Open source |
+| [Cline](https://cline.bot) | Coding agent as a VS Code extension | Open source |
+| [Kilo Code](https://kilo.ai) | Coding agent for VS Code, JetBrains, and the CLI | Open source |
+| [Continue](https://www.continue.dev) | IDE assistant and CLI that can also run agents as pull request checks | Open source |
+
+### running agents in parallel
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Conductor](https://conductor.build) | Mac app that runs several Claude Code and Codex agents at once, each in its own git worktree | Free app, agents billed separately |
+| [Capy](https://capy.ai) | Cloud IDE that runs many coding agents on separate tasks, from task to merged pull request | Paid |
+| [bb](https://getbb.app) | Workbench for running and coordinating Claude Code, Codex, Cursor, and other agents at once | Open source |
+| [Vibe Kanban](https://vibekanban.com) | Kanban board that sends each task to a coding agent in its own worktree | Open source |
+| [Sculptor](https://imbue.com/sculptor) | Imbue's desktop app that runs parallel coding agents in containers | Free |
+| [Nimbalyst](https://nimbalyst.com) | Desktop app, formerly Crystal, that runs Claude Code and Codex sessions side by side in worktrees | Free |
+| [Emdash](https://github.com/generalaction/emdash) | Desktop app that runs agents from different providers in parallel worktrees | Open source |
+| [Superset](https://superset.sh) | Desktop app for running and switching between many CLI agents | Free tier |
+| [Claude Squad](https://github.com/smtg-ai/claude-squad) | tmux manager for several Claude Code, Codex, or Aider sessions in worktrees | Open source |
+
+### app builders
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [v0](https://v0.app) | Vercel's tool for generating React and Next.js apps and deploying them | Free tier |
+| [Bolt.new](https://bolt.new) | Builds and runs full-stack web apps from prompts in the browser | Free tier |
+| [Lovable](https://lovable.dev) | Builds web apps from prompts and syncs the code to GitHub | Free tier |
+| [Replit Agent](https://replit.com) | Builds and deploys apps inside Replit's hosted workspace | Free tier |
+
+### libraries and add-ons for your agents
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Context7](https://context7.com) | MCP server that gives agents current library documentation | Free tier |
+| [Superpowers](https://github.com/obra/superpowers) | Skills library that gives coding agents a workflow: brainstorm, plan, test first, review | Open source |
+| [Anthropic Skills](https://github.com/anthropics/skills) | Example and reference agent skills from Anthropic | Open source |
+| [AGENTS.md](https://agents.md) | Shared file format for giving any coding agent project instructions | Free |
+| [Task Master](https://github.com/eyaltoledano/claude-task-master) | Breaks a spec into tasks that a coding agent works through | Open source |
+| [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD) | Set of agent roles and workflows for planning and building with coding agents | Open source |
+| [Serena](https://github.com/oraios/serena) | MCP server that gives agents symbol-level code search and editing through language servers | Open source |
+| [Playwright MCP](https://github.com/microsoft/playwright-mcp) | Lets an agent drive a real browser to test what it built | Open source |
+| [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Lets an agent inspect a live Chrome page, console, network, and performance | Open source |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Gives agents access to issues, pull requests, and Actions | Open source |
+| [Repomix](https://github.com/yamadashy/repomix) | Packs a repo into one file to paste into a model | Open source |
+| [Agent Reach](https://github.com/Panniantong/Agent-Reach) | Lets an agent read and search Twitter, Reddit, YouTube, GitHub, and similar sites without API keys | Open source |
+| [Hermes Agent](https://hermes-agent.nousresearch.com) | Nous Research's general agent with memory, skills, and scheduled jobs; usable for coding and automation | Open source |
+
+## reviewing your code
+
+### pull request review
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [CodeRabbit](https://coderabbit.ai) | Line-by-line review on pull requests, plus a CLI and IDE extension | Free tier, free for open source |
+| [Cursor Bugbot](https://cursor.com/bugbot) | Pull request reviewer focused on finding bugs | Paid |
+| [GitHub Copilot code review](https://docs.github.com/en/copilot) | Request Copilot as a reviewer on a pull request | Included in Copilot plans |
+| [Claude Code GitHub Actions](https://docs.claude.com/en/docs/claude-code/github-actions) | Runs Claude on pull requests and issues from a workflow | Paid (API usage) |
+| [Codex code review](https://openai.com/codex/) | Codex reviews pull requests on GitHub | Paid (ChatGPT plan) |
+| [Graphite Agent](https://graphite.com) | Reviewer that comments on pull requests, with stacked pull requests; Graphite is now part of Cursor | Free tier |
+| [Greptile](https://www.greptile.com) | Reviewer that indexes the whole codebase for context | Paid |
+| [Open Code Review](https://github.com/alibaba/open-code-review) | Alibaba's self-hosted reviewer that combines fixed checks with an LLM and leaves line comments | Open source |
+| [Qodo](https://www.qodo.ai) | Code review and test generation | Free tier |
+| [Ellipsis](https://www.ellipsis.dev) | Reviews pull requests and can push fixes to them | Paid |
+| [Sourcery](https://www.sourcery.ai) | Reviews pull requests on GitHub and GitLab, and in the IDE | Free tier |
+| [cubic](https://www.cubic.dev) | Reviews pull requests and learns from team feedback | Free tier |
+| [Baz](https://baz.ai) | Checks pull requests against the plan and the codebase; also has a local CLI | Paid |
+| [CodeAnt AI](https://www.codeant.ai) | Pull request review combined with static analysis and security scanning | Paid |
+
+### security and tests
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Snyk](https://snyk.io) | Finds vulnerabilities in code and dependencies and suggests fixes | Free tier |
+| [Semgrep Assistant](https://semgrep.dev) | Triages Semgrep findings, marks false positives, and suggests fixes | Free tier |
+| [Aikido](https://www.aikido.dev) | Scans code and dependencies and suggests fixes | Free tier |
+| [Corgea](https://corgea.com) | Finds vulnerabilities and writes fixes for them | Paid |
+| [Codex Security](https://openai.com/codex/) | Scans a repo for vulnerabilities and proposes patches | Paid |
+| [Diffblue Cover](https://www.diffblue.com) | Writes unit tests for Java and Python | Paid |
+| [Tusk](https://www.usetusk.ai) | Writes unit and integration tests for the code changed in a pull request | Paid |
+
+### CI
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Blacksmith](https://www.blacksmith.sh) | Faster GitHub Actions runners; its Codesmith agent fixes failed checks | Free tier |
+| [GitHub Agentic Workflows](https://github.github.com/gh-aw/) | Runs coding agents as GitHub Actions from markdown workflow files | Open source, model usage paid |
+| [Nx Self-Healing CI](https://nx.dev/docs/features/ci-features/self-healing-ci) | Analyzes failed CI tasks and proposes a fix for the pull request | Free tier |
+| [CircleCI Chunk](https://circleci.com/blog/introducing-chunk/) | Fixes flaky tests and failing builds in CircleCI | Paid |
+| [Gitar](https://gitar.ai) | Analyzes CI failures and pushes fixes | Paid |
+| [Trunk](https://trunk.io) | Flaky test detection, quarantine, and merge queue with AI failure summaries | Paid |
+| [Buildkite MCP server](https://buildkite.com/platform/agentic-workflows/) | Gives coding agents the logs of failed builds | Open source, Buildkite paid |
+
+## watching prod
+
+### errors, analytics, and observability
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [PostHog](https://posthog.com/ai) | PostHog AI answers questions about analytics, errors, and replays; the MCP server gives your agent the same data; PostHog Desktop turns errors and tickets into pull requests | Free tier |
+| [Polylane](https://polylane.com) | Agents that watch metrics, logs, and traces, open fix pull requests, and give production context to your coding agent | Free tier |
+| [Sentry Seer](https://sentry.io/product/seer/) | Root cause analysis and suggested fixes for Sentry errors | Paid add-on |
+| [Grafana Assistant](https://grafana.com/products/cloud/ai-assistant/) | Builds queries and dashboards and runs root cause investigations in Grafana Cloud | Free tier |
+| [Honeycomb](https://www.honeycomb.io/platform/canvas) | Canvas and an MCP server for querying traces while debugging | Free tier |
+| [Datadog Bits AI SRE](https://www.datadoghq.com/product/ai/bits-ai-sre/) | Investigates Datadog alerts and proposes causes | Paid |
+| [New Relic SRE Agent](https://newrelic.com) | Investigates alerts and incidents over New Relic data | Paid |
+| [Dynatrace](https://www.dynatrace.com) | SRE, developer, and security agents over Dynatrace data | Paid |
+| [Coralogix Olly](https://coralogix.com/docs/user-guides/olly/) | Answers questions about logs, metrics, and traces in Coralogix | Paid |
+| [Dash0 Agent0](https://www.dash0.com/documentation/dash0/agent0) | Troubleshooting and query agents in an OpenTelemetry-native tool | Paid |
+| [Metoro](https://metoro.io) | Kubernetes observability with an agent that investigates alerts and opens fix pull requests | Free tier |
+| [Amplitude AI Agents](https://amplitude.com/ai-agents) | Watch product analytics and suggest experiments and fixes | Paid |
+
+### incidents and on-call
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [incident.io AI SRE](https://incident.io) | Investigates incidents and drafts updates | Paid |
+| [PagerDuty AI agents](https://www.pagerduty.com) | Triage and incident agents inside PagerDuty | Paid |
+| [Rootly AI SRE](https://rootly.com/ai-sre) | Investigates in Slack and drafts timelines and postmortems | Paid |
+| [Better Stack AI SRE](https://betterstack.com/ai-sre) | Correlates logs, metrics, traces, and deploys, and opens fix pull requests | Free tier |
+| [Resolve AI](https://resolve.ai) | On-call agent across logs, metrics, and code | Paid |
+| [Cleric](https://cleric.ai) | Checks deploys, triages alerts, and hands off fix pull requests | Paid |
+| [Traversal](https://www.traversal.com) | Diagnoses incidents and triages alerts in large systems | Paid |
+| [Causely](https://www.causely.ai) | Builds a causal model of services to find root causes | Paid |
+| [NeuBird Hawkeye](https://neubird.ai) | Investigates incidents across cloud and observability tools | Paid |
+| [Deductive AI](https://www.deductive.ai) | Incident investigation over code and telemetry, now part of Elastic | Paid |
+| [AWS DevOps Agent](https://aws.amazon.com/about-aws/whats-new/2026/03/aws-devops-agent-generally-available) | Investigates incidents across AWS resources | Paid |
+| [Azure SRE Agent](https://azure.microsoft.com/en-us/products/sre-agent) | Diagnoses and fixes problems in Azure resources | Paid |
+
+### Kubernetes
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [HolmesGPT](https://github.com/HolmesGPT/holmesgpt) | CNCF sandbox agent that investigates alerts with read-only Kubernetes and Prometheus access | Open source |
+| [K8sGPT](https://github.com/k8sgpt-ai/k8sgpt) | Scans a cluster and explains problems in plain language | Open source |
+| [Komodor Klaudia](https://komodor.com/platform/klaudia-ai-powered-troubleshooting/) | Kubernetes troubleshooting agent | Paid |
+| [Parity](https://www.tryparity.com) | On-call assistant that runs root cause analysis and runbooks on Kubernetes alerts | Paid |
+| [Aurora](https://github.com/Arvo-AI/aurora) | Investigates incidents across clouds and writes postmortems | Open source |
+
+## creating issues
+
+### trackers and planning
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Linear](https://linear.app) | Issue tracker with AI triage and agents you can assign issues to | Free tier |
+| [Jira with Rovo](https://www.atlassian.com/software/rovo) | Atlassian's AI for writing and triaging Jira work items | Free tier |
+| [Plane](https://plane.so) | Tracker with agents that triage items and write specs from short notes | Open source, agents paid |
+| [Korey](https://korey.ai) | Turns notes and Slack threads into stories with acceptance criteria | Free tier |
+| [Jam](https://jam.dev) | Records a bug with console and network logs and files it to Jira or Linear | Free tier |
+| [Traycer](https://traycer.ai) | Writes a spec and plan from your codebase and hands tasks to coding agents | Free tier |
+| [GitHub Spec Kit](https://github.com/github/spec-kit) | Templates and a CLI for spec-driven development with any agent | Open source |
+
+### issue to pull request
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [GitHub Copilot coding agent](https://docs.github.com/en/copilot) | Assign a GitHub issue to Copilot and it opens a pull request | Paid Copilot plans |
+| [Codex cloud](https://openai.com/codex/) | Assign from a Linear issue or Slack message and get a pull request | Paid (ChatGPT plan) |
+| [Cursor cloud agents](https://cursor.com) | Start from Slack, Linear, or GitHub and get a pull request | Paid |
+| [Claude Code in Slack](https://code.claude.com/docs/en/slack) | Starts a Claude Code session from a Slack thread and returns a pull request | Paid |
+| [GitLab Duo Agent Platform](https://docs.gitlab.com/user/duo_agent_platform/) | GitLab agents, including an issue to merge request flow | Paid |
+| [ClickUp Codegen](https://clickup.com/brain/agents/codegen) | Turns ClickUp tasks into pull requests | Paid |
+| [Tembo](https://www.tembo.io) | Runs coding agents in cloud environments, started from issues or chat | Paid |
+| [Devin](https://devin.ai) | Takes tickets from Slack, Linear, or Jira | Paid |
+| [Google Jules](https://jules.google) | Works from GitHub tasks | Free tier |
+
+## browsers and automation
+
+### agentic browsers
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [Perplexity Comet](https://www.perplexity.ai/comet) | Browser with an assistant that reads pages and runs multi-step tasks in your tabs | Free tier |
+| [Claude in Chrome](https://claude.com/chrome) | Chrome extension that lets Claude navigate, click, and fill forms in your browser | Paid (Claude plan) |
+| [Gemini in Chrome](https://www.google.com/chrome/ai-innovations/) | Gemini side panel in Chrome; auto browse runs multi-step web tasks | Free tier, auto browse paid |
+| [ChatGPT agent](https://chatgpt.com/features/agent/) | Browses and does tasks in a remote browser, or in your own through the Chrome extension; replaced Atlas and Operator | Paid |
+| [Microsoft Edge](https://www.microsoft.com/edge) | Copilot Actions act on pages and Journeys group past browsing, built into Edge | Free |
+| [Dia](https://www.diabrowser.com) | macOS browser from The Browser Company with an assistant across tabs and reusable skills | Free tier |
+| [Opera Neon](https://www.operaneon.com) | Opera's browser that runs tasks and builds small outputs from web content | Paid |
+| [Genspark AI Browser](https://www.genspark.ai/browser) | Browser with an autopilot mode for web tasks and an MCP store | Free tier |
+| [Fellou](https://fellou.ai) | Browser that plans and runs multi-step web tasks and research across sites | Free tier |
+| [Sigma AI Browser](https://www.sigmabrowser.com) | Privacy-focused browser with a built-in agent and optional local models | Free tier |
+| [Brave Leo](https://brave.com/leo/) | Brave's assistant, with an early agent mode that acts on pages | Free tier |
+| [Manus](https://manus.im) | General agent that runs research, browsing, and file tasks in a cloud sandbox | Free tier |
+
+### automation
+
+| Tool | What it is | Cost |
+| --- | --- | --- |
+| [n8n](https://n8n.io) | Node-based workflow automation with AI agent nodes and self-hosting | Free to self-host, cloud paid |
+| [Zapier Agents](https://zapier.com/agents) | Agents that act across Zapier's app integrations | Free tier |
+| [Make](https://www.make.com/en/ai-agents) | Visual scenario builder with agents that call Make's app modules | Free tier |
+| [Activepieces](https://www.activepieces.com) | Automation builder with AI agent steps and MCP servers | Open source, cloud paid |
+| [Pipedream](https://pipedream.com) | Code-first integration platform with app connectors and MCP servers for agents | Free tier |
+| [Windmill](https://www.windmill.dev) | Turns scripts into workflows, webhooks, and internal UIs, with AI agent steps | Open source |
+| [Trigger.dev](https://trigger.dev) | Durable background jobs and AI agents in TypeScript | Open source, cloud free tier |
+| [Temporal](https://temporal.io) | Durable execution engine that keeps long agent runs going through failures | Open source, cloud paid |
+| [Dify](https://dify.ai) | Builder for agent workflows, RAG pipelines, and LLM apps | Open source, cloud free tier |
+| [Langflow](https://www.langflow.org) | Visual builder for agent and RAG flows in Python | Open source |
+| [Flowise](https://flowiseai.com) | Visual builder for LLM agents and chat flows | Open source |
+| [Skyvern](https://www.skyvern.com) | Automates browser workflows such as forms and portals with LLMs and vision | Open source, cloud paid |
+| [Gumloop](https://www.gumloop.com) | No-code canvas for AI workflows that connect to business apps | Free tier |
+| [Lindy](https://www.lindy.ai) | AI assistants for email, meetings, CRM updates, and similar tasks | Free tier |
+| [Relevance AI](https://relevanceai.com) | Teams of AI agents for sales and operations tasks | Free tier |
+| [Bardeen](https://www.bardeen.ai) | Automates browser and CRM workflows for sales and marketing | Free tier |
+| [Claude Cowork](https://claude.com/blog/cowork-is-now-claude) | Claude's desktop agent that works on local files and apps, now part of the Claude app | Paid |
+| [Google Opal](https://opal.google) | Chains prompts, models, and tools into small AI apps | Free |
+| [Google Workspace Studio](https://workspace.google.com/studio/) | Automated flows across Gmail, Drive, Docs, and Chat | Paid (Workspace plans) |
+| [Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot-studio) | Low-code builder for Microsoft 365 agents, including computer use | Paid |
+| [UiPath Agentic Automation](https://www.uipath.com/platform/agentic-automation) | Enterprise RPA that coordinates robots, agents, and people | Paid |
+
+## building agents
+
+### frameworks and SDKs
+
+| Tool | What it is | Language | Cost |
+| --- | --- | --- | --- |
+| [Flue](https://github.com/withastro/flue) | Astro team's framework for headless agents that run in a sandbox; deploys to Cloudflare | TypeScript | Open source |
+| [Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk/overview) | The loop, tools, context handling, and subagents behind Claude Code as a library | Python, TypeScript | Open source, API usage paid |
+| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | Agents with tools, handoffs, guardrails, tracing, and sandboxed execution | Python, TypeScript | Open source |
+| [Codex SDK](https://github.com/openai/codex) | Drives the Codex coding agent from your own code | TypeScript | Open source, API usage paid |
+| [Google ADK](https://github.com/google/adk-python) | Google's Agent Development Kit for single and multi-agent systems | Python, Java, Go, TypeScript | Open source |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | Agents as stateful graphs with checkpoints and human-in-the-loop steps | Python, TypeScript | Open source, paid platform |
+| [LangChain](https://github.com/langchain-ai/langchain) | Model, tool, and retriever integrations with an agent API on LangGraph | Python, TypeScript | Open source |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | Agents and graph workflows; replaces AutoGen and Semantic Kernel | Python, .NET | Open source |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | Groups of agents with roles, plus event-driven flows | Python | Open source, paid platform |
+| [Pydantic AI](https://github.com/pydantic/pydantic-ai) | Type-safe agents with validated structured output | Python | Open source |
+| [Mastra](https://github.com/mastra-ai/mastra) | Agents, workflows, memory, RAG, and evals in one framework | TypeScript | Open source, paid cloud |
+| [Vercel AI SDK](https://github.com/vercel/ai) | Provider-neutral API for text, tool calls, streaming, and agent loops, with UI hooks | TypeScript | Open source |
+| [Strands Agents](https://github.com/strands-agents/sdk-python) | AWS's model-driven agent loop with tools and MCP | Python, TypeScript | Open source |
+| [LlamaIndex](https://github.com/run-llama/llama_index) | Data connectors, indexing, and retrieval, with agent workflows over documents | Python, TypeScript | Open source, paid cloud |
+| [Agno](https://github.com/agno-agi/agno) | Agents and teams with memory, knowledge, and tools; formerly Phidata | Python | Open source, paid platform |
+| [smolagents](https://github.com/huggingface/smolagents) | Small library for agents that write and run Python as their actions | Python | Open source |
+| [DSPy](https://github.com/stanfordnlp/dspy) | Writes LM programs as modules and optimizes their prompts | Python | Open source |
+| [OpenHands SDK](https://docs.openhands.dev/sdk) | Library for building coding agents, the engine behind OpenHands | Python | Open source, paid cloud |
+| [Cloudflare Agents SDK](https://github.com/cloudflare/agents) | Stateful agents on Durable Objects with scheduling, WebSockets, and MCP | TypeScript | Open source, usage billed |
+| [Inngest AgentKit](https://github.com/inngest/agent-kit) | Multi-agent networks with routing and MCP tools on durable execution | TypeScript | Open source |
+| [VoltAgent](https://github.com/VoltAgent/voltagent) | Agents, workflows, memory, and an observability console | TypeScript | Open source, paid console |
+| [Genkit](https://github.com/firebase/genkit) | Google's flows, tool calling, and local dev UI for AI features | TypeScript, Go, Python | Open source |
+| [BeeAI Framework](https://github.com/i-am-bee/beeai-framework) | IBM's agents and workflows, now under the Linux Foundation | Python, TypeScript | Open source |
+| [Haystack](https://github.com/deepset-ai/haystack) | Pipelines and agents for RAG and tool use | Python | Open source, paid platform |
+| [Rig](https://github.com/0xPlaygrounds/rig) | Provider-neutral LLM clients, embeddings, tools, and agents | Rust | Open source |
+| [Eino](https://github.com/cloudwego/eino) | ByteDance's LLM components, graphs, and ReAct agent | Go | Open source |
+
+### protocols and tool layers
+
+| Tool | What it is | Language | Cost |
+| --- | --- | --- | --- |
+| [MCP SDKs](https://github.com/modelcontextprotocol) | Official libraries for building MCP servers and clients | Most major languages | Open source |
+| [FastMCP](https://github.com/jlowin/fastmcp) | Decorator-based framework for MCP servers and clients | Python | Open source |
+| [A2A](https://github.com/a2aproject/A2A) | Protocol and SDKs for agents to find and call each other | Python, TypeScript, Java, Go, .NET | Open source |
+| [AG-UI](https://github.com/ag-ui-protocol/ag-ui) | Event protocol that streams agent state and actions to a frontend | TypeScript, Python | Open source |
+| [CopilotKit](https://github.com/CopilotKit/CopilotKit) | React components and runtime for agent UIs inside your app | TypeScript | Open source, paid cloud |
+| [Composio](https://github.com/ComposioHQ/composio) | Hosted connectors to many SaaS APIs with managed auth | Python, TypeScript | Free tier |
+| [Arcade](https://github.com/ArcadeAI/arcade-mcp) | Tool runtime with per-user OAuth for building and hosting MCP tools; now owns Smithery | Python, TypeScript | Free tier |
+| [Smithery](https://smithery.ai) | Registry and hosting for MCP servers | TypeScript | Free tier |
+
+### evals and tracing
+
+| Tool | What it is | Language | Cost |
+| --- | --- | --- | --- |
+| [Langfuse](https://github.com/langfuse/langfuse) | Traces, prompt management, evals, and datasets; self-hostable | TypeScript, Python | Open source, paid cloud |
+| [LangSmith](https://smith.langchain.com) | Tracing, datasets, and evals for any framework | Python, TypeScript | Free tier |
+| [Arize Phoenix](https://github.com/Arize-ai/phoenix) | Tracing and evals on OpenTelemetry; self-hostable | Python, TypeScript | Open source |
+| [Braintrust](https://www.braintrust.dev) | Eval experiments, scorers, logging, and a prompt playground | Python, TypeScript | Free tier |
+| [Promptfoo](https://github.com/promptfoo/promptfoo) | CLI for prompt and agent evals and red-teaming; now owned by OpenAI | TypeScript | Open source |
+| [Opik](https://github.com/comet-ml/opik) | Comet's tracing, evals, and prompt optimization; self-hostable | Python, TypeScript | Open source, paid cloud |
+| [W&B Weave](https://github.com/wandb/weave) | Traces and scores LLM calls and agent runs | Python, TypeScript | Free tier |
+| [MLflow](https://github.com/mlflow/mlflow) | Tracing and evals for LLM apps inside MLflow | Python | Open source |
+
+### memory, sandboxes, and browsers
+
+| Tool | What it is | Language | Cost |
+| --- | --- | --- | --- |
+| [Mem0](https://github.com/mem0ai/mem0) | Extracts and retrieves long-term user and agent memories | Python, TypeScript | Open source, paid platform |
+| [Graphiti](https://github.com/getzep/graphiti) | Temporal knowledge graph for agent memory; Zep is the hosted version | Python | Open source |
+| [Letta](https://github.com/letta-ai/letta) | Stateful agents whose memory lives on a server; formerly MemGPT | Python, TypeScript | Open source, paid cloud |
+| [E2B](https://github.com/e2b-dev/E2B) | MicroVM sandboxes where agents run the code they write | Python, TypeScript | Open source, paid cloud |
+| [Daytona](https://github.com/daytonaio/daytona) | Fast-starting sandboxes for agent code | Python, TypeScript | Open source, paid cloud |
+| [Modal](https://modal.com) | Serverless containers, GPUs, and sandboxes controlled from code | Python, TypeScript, Go | Paid, monthly free credits |
+| [Vercel Sandbox](https://vercel.com/docs/vercel-sandbox) | Isolated microVMs for running agent code | TypeScript, Python | Free tier |
+| [Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk) | Runs code in Cloudflare Containers from a Worker | TypeScript | Open source, usage billed |
+| [Browserbase](https://www.browserbase.com) | Hosted headless browsers for agents | Python, TypeScript | Free tier |
+| [Stagehand](https://github.com/browserbase/stagehand) | Browser automation that mixes code with natural-language steps | TypeScript | Open source |
+| [browser-use](https://github.com/browser-use/browser-use) | Lets a model drive a real browser to finish web tasks | Python | Open source, paid cloud |

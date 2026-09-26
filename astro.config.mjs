@@ -68,6 +68,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { label: "All Guides", link: "/guides/" },
+            { label: "100xAI Workflow", link: "/guides/100xai-workflow/" },
             {
               label: "Academics & Campus",
               collapsed: false,
