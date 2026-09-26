@@ -104,6 +104,7 @@ export default defineConfig({
                 { label: "Git and GitHub", link: "/guides/git-and-github/" },
                 { label: "AI and LLM Projects", link: "/guides/ai-and-llm-projects/" },
                 { label: "Maximizing Free AI as ASU Student", link: "/guides/maximizing-free-ai-as-asu-student/" },
+                { label: "100xAI Workflow", link: "/guides/100xai-workflow/" },
                 { label: "Functional Programming", link: "/guides/functional-programming/" },
               ],
             },
